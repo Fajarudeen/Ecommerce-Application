@@ -18,7 +18,6 @@ export class ProductListComponent implements OnInit {
     this.api.getProducts()
     .subscribe((result:any)=>{
     this.productDetails=result.product
-    console.log( this.productDetails);
     this.productDetails.forEach((item:any) => {
       Object.assign(item,{quantity:1,total:item.price})
     });
